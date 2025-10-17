@@ -17,7 +17,12 @@ const PostsPage = () => {
       setLoading(true);
       setError('');
       try {
-        const res = await fetch('http://localhost:7000/posts');
+        const res = await fetch('http://localhost:7000/posts', {
+          headers: {
+            "Authorization": "Bearer " + localStorage.getItem('jwt_token'),
+            'Content-Type': 'application/json',
+          },
+        });
         if (!res.ok) throw new Error('Failed to fetch posts');
         const data = await res.json();
         console.log('Fetched data:', data);

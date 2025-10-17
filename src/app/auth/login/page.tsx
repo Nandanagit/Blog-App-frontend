@@ -26,6 +26,12 @@ export default function Login() {
                 return;
             }
             // If backend returns 200, assume login is successful
+            const data = await response.json();
+            localStorage.setItem('name', data.user.name); 
+            if (data.token) {
+                localStorage.setItem('jwt_token', data.token); 
+            }
+            console.log(data);
             setShowSignIn(true);
         } catch (err) {
             alert('Invalid credentials');

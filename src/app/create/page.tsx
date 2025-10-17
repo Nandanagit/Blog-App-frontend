@@ -1,26 +1,29 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
 const NewPostPage = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [message, setMessage] = useState('');
-
+  const router = useRouter();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMessage('');
     try {
       const res = await fetch('http://localhost:7000/posts', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+         headers: {
+      "Authorization": "Bearer " + localStorage.getItem('jwt_token'),
+      'Content-Type': 'application/json',
+    },
         body: JSON.stringify({ title, body }),
       });
       if (res.ok) {
         setMessage('Post created successfully!');
         setTitle('');
         setBody('');
+        router.push("/post")
       } else {
         const data = await res.json().catch(() => ({}));
         setMessage(data.message || 'Failed to create post.');
