@@ -109,13 +109,13 @@ export default function Login() {
 
                         {/* Remember Me & Forgot Password */}
                         <div className="flex items-center justify-between">
-                            <label className="flex items-center">
+                            {/* <label className="flex items-center">
                                 <input
                                     type="checkbox"
                                     className="w-4 h-4 text-blue-500 bg-gray-800 border-gray-600 rounded focus:ring-blue-500 focus:ring-2"
                                 />
                                 <span className="ml-2 text-sm text-gray-300">Remember me</span>
-                            </label>
+                            </label> */}
                             <Link 
                                 href="/auth/forgotpass"
                                 className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
@@ -134,7 +134,7 @@ export default function Login() {
                     </form>
 
                     {/* Divider */}
-                    <div className="mt-6">
+                    {/* <div className="mt-6">
                         <div className="relative">
                             <div className="absolute inset-0 flex items-center">
                                 <div className="w-full border-t border-gray-700"></div>
@@ -143,10 +143,10 @@ export default function Login() {
                                 <span className="px-2 bg-gray-900 text-gray-400">Or continue with</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Social Login Buttons */}
-                    <div className="mt-6 grid grid-cols-2 gap-3">
+                    {/* <div className="mt-6 grid grid-cols-2 gap-3">
                         <button className="w-full inline-flex justify-center py-3 px-4 border border-gray-700 rounded-lg bg-gray-800 text-sm font-medium text-gray-300 hover:bg-gray-700 transition-colors">
                             <svg className="w-5 h-5" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -162,7 +162,7 @@ export default function Login() {
                             </svg>
                             <span className="ml-2">GitHub</span>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Sign Up Link */}

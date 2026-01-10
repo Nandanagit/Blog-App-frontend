@@ -35,7 +35,7 @@ const NewPostPage = () => {
 
 
   return (
-    <div style={{ maxWidth: 600, margin: '40px auto', padding: 24, borderRadius: 8, background: '#fff', boxShadow: '0 2px 8px rgba(42, 42, 42, 0.07)', color: '#000' }}>
+    <div style={{ maxWidth: 600, margin: '40px auto', padding: 24, borderRadius: 8, background: '#8d5f5fff', boxShadow: '0 2px 8px rgba(42, 42, 42, 0.07)', color: '#000' }}>
       <h2 style={{ color: '#000' }}>Create New Post</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: 16 }}>
