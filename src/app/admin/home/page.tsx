@@ -287,7 +287,7 @@ export default function AdminHomePage() {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {posts.map((post) => {
-              const author = users.find(user => user.id === post.authorId);
+              const author = users.find(user => user._id === post.authorId);
               return (
                 <tr key={post.id}>
                   <td className="px-6 py-4">

@@ -28,8 +28,12 @@ const PublicBlogListing = () => {
         } else {
           setPosts([]);
         }
-      } catch (err: any) {
-        setError(err.message || "Error fetching posts");
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message || "Error fetching posts");
+        } else {
+          setError("Error fetching posts");
+        }
       } finally {
         setLoading(false);
       }

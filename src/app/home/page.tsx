@@ -38,8 +38,12 @@ export default function Home() {
         } else {
           setPosts([]);
         }
-      } catch (err: any) {
-        setError(err.message || 'Error fetching posts');
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message || 'Error fetching posts');
+        } else {
+          setError('Error fetching posts');
+        }
       } finally {
         setLoading(false);
       }
@@ -61,9 +65,9 @@ export default function Home() {
                 Login
               </Link>
               <Link href="/post" className="hover:text-gray-200">
-                Blog
+                All Posts
               </Link>
-              <Link href="#" className="hover:text-gray-200">
+              <Link href="/category" className="hover:text-gray-200">
                 Categories
               </Link>
               <Link href="/about" className="hover:text-gray-200">

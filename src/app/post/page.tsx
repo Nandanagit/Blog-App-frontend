@@ -36,8 +36,12 @@ const PostsPage = () => {
           setPosts([]);
         }
         console.log('Posts state:', data.posts || data);
-      } catch (err: any) {
-        setError(err.message || 'Error fetching posts');
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message || 'Error fetching posts');
+        } else {
+          setError('Error fetching posts');
+        }
       } finally {
         setLoading(false);
       }
@@ -60,9 +64,9 @@ const PostsPage = () => {
             </Link>
             <nav className="hidden sm:flex gap-8 text-xs tracking-[0.25em] uppercase">
               <Link href="/post" className="hover:text-gray-200">
-                Blog
+                All Posts
               </Link>
-              <Link href="#" className="hover:text-gray-200">
+              <Link href="/category" className="hover:text-gray-200">
                 Categories
               </Link>
               <Link href="/about" className="hover:text-gray-200">
