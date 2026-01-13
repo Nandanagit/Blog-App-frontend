@@ -20,7 +20,7 @@ const PostsPage = () => {
       setLoading(true);
       setError('');
       try {
-        const res = await fetch('https://nandana-blog-backend.vercel.app/api/posts', {
+        const res = await fetch('https://nandana-blog-backend.vercel.app/posts', {
           headers: {
             'Content-Type': 'application/json',
           },

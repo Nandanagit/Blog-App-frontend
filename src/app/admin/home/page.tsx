@@ -49,7 +49,7 @@ export default function AdminHomePage() {
   // Fetch all posts
   const fetchPosts = async (): Promise<void> => {
     try {
-      const response = await fetch('https://nandana-blog-backend.vercel.app/api/admin/posts', {
+      const response = await fetch('https://nandana-blog-backend.vercel.app/admin/posts', {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
         },
@@ -66,7 +66,7 @@ export default function AdminHomePage() {
   // Create a new post
   const createPost = async (postData: NewPostData): Promise<void> => {
     try {
-      const response = await fetch('https://nandana-blog-backend.vercel.app/api/admin/post', {
+      const response = await fetch('https://nandana-blog-backend.vercel.app/admin/post', {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -87,7 +87,7 @@ export default function AdminHomePage() {
   // Update an existing post
   const updatePost = async (postId: string, updates: { title: string; body: string }): Promise<void> => {
     try {
-      const response = await fetch(`https://nandana-blog-backend.vercel.app/api/admin/post/${postId}`, {
+      const response = await fetch(`https://nandana-blog-backend.vercel.app/admin/post/${postId}`, {
         method: 'PUT',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -107,7 +107,7 @@ export default function AdminHomePage() {
   // Delete a post
   const deletePost = async (postId: string): Promise<void> => {
     try {
-                          await fetch(`https://nandana-blog-backend.vercel.app/api/admin/post/${postId}`, {
+                          await fetch(`https://nandana-blog-backend.vercel.app/admin/post/${postId}`, {
                             method: 'DELETE',
                             headers: {
                               'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -123,7 +123,7 @@ export default function AdminHomePage() {
   // Fetch all users
   const fetchUsers = async (): Promise<void> => {
     try {
-      const response = await fetch('https://nandana-blog-backend.vercel.app/api/admin/users', {
+      const response = await fetch('https://nandana-blog-backend.vercel.app/admin/users', {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
           'Content-Type': 'application/json',
@@ -142,7 +142,7 @@ export default function AdminHomePage() {
   // Update user
   const updateUser = async (_: string, updates: UpdateUserData): Promise<void> => {
     try {
-      const response = await fetch(`https://nandana-blog-backend.vercel.app/api/admin/user/${updates.id}`, {
+      const response = await fetch(`https://nandana-blog-backend.vercel.app/admin/user/${updates.id}`, {
         method: 'PUT',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -165,7 +165,7 @@ export default function AdminHomePage() {
   // Delete user
   const deleteUser = async (_id: string): Promise<void> => {
     try {
-      const response = await fetch(`https://nandana-blog-backend.vercel.app/api/admin/user/${_id}`, {
+      const response = await fetch(`https://nandana-blog-backend.vercel.app/admin/user/${_id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),

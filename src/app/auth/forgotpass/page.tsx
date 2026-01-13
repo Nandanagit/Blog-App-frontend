@@ -21,7 +21,7 @@ export default function ForgotPassword() {
     }
 
     try {
-      const res = await fetch('https://nandana-blog-backend.vercel.app/api/auth/request-password-reset', {
+      const res = await fetch('https://nandana-blog-backend.vercel.app/auth/request-password-reset', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

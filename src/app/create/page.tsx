@@ -11,7 +11,7 @@ const NewPostPage = () => {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await fetch('https://nandana-blog-backend.vercel.app/api/posts', {
+      const res = await fetch('https://nandana-blog-backend.vercel.app/posts', {
         method: 'POST',
          headers: {
       "Authorization": "Bearer " + localStorage.getItem('jwt_token'),
