@@ -36,7 +36,7 @@ export default function NewPassword() {
       return;
     }
     try {
-      const res = await fetch('https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/reset-password', {
+      const res = await fetch('https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/api/admin/reset-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

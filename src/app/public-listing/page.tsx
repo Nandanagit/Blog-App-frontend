@@ -18,7 +18,7 @@ const PublicBlogListing = () => {
       setLoading(true);
       setError("");
       try {
-       const res = await fetch("https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/posts/postss");
+       const res = await fetch("https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/api/posts/postss");
         if (!res.ok) throw new Error("Failed to fetch posts");
         const data = await res.json();
         if (Array.isArray(data)) {
