@@ -23,7 +23,7 @@ export default function Home() {
       setLoading(true);
       setError('');
       try {
-        const res = await fetch('https://nandana-blog-backend.vercel.app/posts', {
+        const res = await fetch('https://blog-nandana-backend.vercel.app/posts', {
           headers: {
             Authorization: 'Bearer ' + localStorage.getItem('jwt_token'),
             'Content-Type': 'application/json',

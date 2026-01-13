@@ -14,7 +14,7 @@ export default function Login() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://nandana-blog-backend.vercel.app/admin/login', {
+            const response = await fetch('https://blog-nandana-backend.vercel.app/admin/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

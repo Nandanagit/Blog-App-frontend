@@ -35,7 +35,7 @@ export default function SignUpPage() {
     setError('');
 
     try {
-      const response = await fetch('https://nandana-blog-backend.vercel.app/auth/signup', {
+      const response = await fetch('https://blog-nandana-backend.vercel.app/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
