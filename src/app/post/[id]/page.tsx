@@ -19,7 +19,7 @@ const PostPage = () => {
         console.log("hiiii",id);
         if (!id) return;
         const fetchPost = async () => {
-            const res = await fetch(`http://localhost:7000/posts/id/${id}`, {
+            const res = await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/posts/id/${id}`, {
               headers: {
                 'Content-Type': 'application/json',
               },

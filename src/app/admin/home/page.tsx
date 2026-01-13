@@ -49,7 +49,7 @@ export default function AdminHomePage() {
   // Fetch all posts
   const fetchPosts = async (): Promise<void> => {
     try {
-      const response = await fetch('http://localhost:7000/admin/posts', {
+      const response = await fetch('https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/posts', {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
         },

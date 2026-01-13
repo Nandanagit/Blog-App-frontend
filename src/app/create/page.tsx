@@ -11,7 +11,7 @@ const NewPostPage = () => {
     e.preventDefault();
     setMessage('');
     try {
-      const res = await fetch('http://localhost:7000/posts', {
+      const res = await fetch('https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/posts', {
         method: 'POST',
          headers: {
       "Authorization": "Bearer " + localStorage.getItem('jwt_token'),

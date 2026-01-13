@@ -32,7 +32,7 @@ function UserProfilePage() {
     const username = localStorage.getItem('name');
       if (!username) return;
       try {
-        const res = await fetch(`http://localhost:7000/auth/profile`, {
+        const res = await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/auth/profile`, {
           headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
             'Content-Type': 'application/json',

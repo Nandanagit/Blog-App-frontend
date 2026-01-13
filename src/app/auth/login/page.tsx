@@ -14,7 +14,7 @@ export default function Login() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:7000/auth/login', {
+            const response = await fetch('https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

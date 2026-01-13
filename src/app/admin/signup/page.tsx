@@ -35,7 +35,7 @@ export default function SignUpPage() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:7000/admin/signup', {
+      const response = await fetch('https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
