@@ -53,7 +53,7 @@ function UserProfilePage() {
      const username = localStorage.getItem('name');
       if (!username) return;
       try {
-        const res = await fetch(`http://localhost:7000/posts/author/${username}`, {
+        const res = await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/posts/author/${username}`, {
            headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
             'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ function UserProfilePage() {
     const username = localStorage.getItem('name');
     if (!username) return;
     try {
-      const res = await fetch(`http://localhost:7000/posts/update/${id}`, {
+      const res = await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/posts/update/${id}`, {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -190,7 +190,7 @@ function UserProfilePage() {
                       className="px-3 py-2 text-sm bg-red-500 text-black rounded-md hover:bg-red-700 flex items-center gap-1"
                       onClick={async () => {
                         try {
-                          await fetch(`http://localhost:7000/posts/delete/${blog.id}`, {
+                          await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/posts/delete/${blog.id}`, {
                             method: 'DELETE',
                             headers: {
                               'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),

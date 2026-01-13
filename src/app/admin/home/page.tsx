@@ -66,7 +66,7 @@ export default function AdminHomePage() {
   // Create a new post
   const createPost = async (postData: NewPostData): Promise<void> => {
     try {
-      const response = await fetch('http://localhost:7000/admin/post', {
+      const response = await fetch('https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/post', {
         method: 'POST',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -87,7 +87,7 @@ export default function AdminHomePage() {
   // Update an existing post
   const updatePost = async (postId: string, updates: { title: string; body: string }): Promise<void> => {
     try {
-      const response = await fetch(`http://localhost:7000/admin/post/${postId}`, {
+      const response = await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/post/${postId}`, {
         method: 'PUT',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -107,7 +107,7 @@ export default function AdminHomePage() {
   // Delete a post
   const deletePost = async (postId: string): Promise<void> => {
     try {
-                          await fetch(`http://localhost:7000/admin/post/${postId}`, {
+                          await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/post/${postId}`, {
                             method: 'DELETE',
                             headers: {
                               'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -123,7 +123,7 @@ export default function AdminHomePage() {
   // Fetch all users
   const fetchUsers = async (): Promise<void> => {
     try {
-      const response = await fetch('http://localhost:7000/admin/users', {
+      const response = await fetch('https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/users', {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
           'Content-Type': 'application/json',
@@ -142,7 +142,7 @@ export default function AdminHomePage() {
   // Update user
   const updateUser = async (_: string, updates: UpdateUserData): Promise<void> => {
     try {
-      const response = await fetch(`http://localhost:7000/admin/user/${updates.id}`, {
+      const response = await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/user/${updates.id}`, {
         method: 'PUT',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
@@ -165,7 +165,7 @@ export default function AdminHomePage() {
   // Delete user
   const deleteUser = async (_id: string): Promise<void> => {
     try {
-      const response = await fetch(`http://localhost:7000/admin/user/${_id}`, {
+      const response = await fetch(`https://blog-app-backend-gov349cdq-nandanas-projects-c6b2e22a.vercel.app/admin/user/${_id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('jwt_token'),
